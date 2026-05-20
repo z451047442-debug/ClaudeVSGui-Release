@@ -1,41 +1,40 @@
+# ClaudeVSGui：在 Visual Studio 中使用 Claude Code
 
-# ClaudeVSGui: Claude Code in Visual Studio
+直接在 Visual Studio 内使用顶级 AI 编程命令行工具。
 
-**Use top AI coding CLIs directly inside Visual Studio.**
+ClaudeVSGui 将 **Claude Code CLI、Copilot CLI、Codex CLI 和 Gemini CLI** 集成到 Visual Studio 2022 与 2026 中，让您无需离开 IDE 即可与偏好的代理协作。
 
-ClaudeVSGui integrates **Claude Code CLI, Copilot CLI, Codex CLI, and Gemini CLI** into Visual Studio 2022 and 2026, so you can work with your preferred agent without leaving the IDE.
+## 核心功能
 
-## Core Features
+- **快速切换模型**  
+  默认通过 Alt+1、Alt+2、Alt+3、Alt+4 热键切换 Claude 模型，支持重新绑定。
+- **免提输入**  
+  按 `Alt+S` 使用 Windows 语音识别发出语音命令。
+- **通过选项卡并行运行多个代理**  
+  同时运行多个代理，各自拥有独立选项卡。
+- **更快的开发循环**  
+  将编辑器上下文、任务行/注释以及调试器异常直接发送给代理。
+- **Visual Studio 内的原生 CLI 体验**  
+  代理在集成控制台窗口中运行，保留其原始行为与控件。除所支持的 CLI 外，还支持自定义程序。
+- **主题感知 UI**  
+  支持浅色、深色和系统主题。
+- **隐私优先架构**  
+  该扩展不保存任何凭据、对话历史记录或其他用户数据。
 
-- **Quick model switching**  
-  Switch between Claude models via hotkeys: Alt+1, Alt+2, Alt+3, Alt+4 by default, rebindable.
-- **Hands-free input**  
-  Press `Alt+S` to use Windows speech recognition for voice commands.
-- **Run multiple agents in parallel with tabs**  
-  Run multiple agents at the same time, each in its own tab
-- **Faster development loop**  
-  Send editor context, task lines/comments, and debugger exceptions straight to an agent.
-- **Native CLI experience inside Visual Studio**  
-  Agents run in integrated console windows, preserving their original behavior and controls. Support for custom programs in addition to supported CLIs.
-- **Theme-aware UI**  
-  Supports Light, Dark, and System themes.
-- **Privacy-first architecture**  
-  The extension does **not** save any credentials, conversation history, or other user data.
+## 用法
 
-## Usage
+**语音输入**：按 `Alt+S`，说出命令，然后按 Enter 发送。当 Windows 语音识别检测到您已说完时，录音会自动停止。
 
-**Voice input**: press `Alt+S`, speak your command, then press Enter to send. Recording stops automatically when Windows speech recognition detects you are done speaking.
-
-| Menu Item | Description |
+| 菜单项 | 描述 |
 | --- | --- |
-| **View → ClaudeVSGui** | Launch Claude Code CLI (requires an open project/solution) |
-| **View → Send Location to Agent** | Send active file path, line number, and selected text |
-| **View → Send Task to Agent** | Execute current line as a command |
-| **View → Send Exception to Agent** | Send debugger exception/error details from debugger |
+| **视图 → ClaudeVSGui** | 启动 Claude Code CLI（需要打开项目/解决方案） |
+| **视图 → 发送位置到代理** | 发送活动文件路径、行号及选中文本 |
+| **视图 → 发送任务到代理** | 将当前行作为命令执行 |
+| **视图 → 发送异常到代理** | 从调试器发送调试器异常/错误详细信息 |
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
-All actions are hotkey-configurable:
+所有操作均可配置快捷键：
 
 - `ClaudeVSGui.SpeechCommand`
 - `View.ClaudeVSGui`
@@ -43,9 +42,9 @@ All actions are hotkey-configurable:
 - `View.SendTasktoAgent`
 - `View.SendDebuggerExceptiontoAgent`
 
-ClaudeVSGui can also capture and forward key combinations commonly used by Claude Code CLI (for example `Ctrl+B`, `Ctrl+O`, `Ctrl+R`). Configure these in:
+ClaudeVSGui 还能捕获并转发 Claude Code CLI 常用组合键（例如 `Ctrl+B`、`Ctrl+O`、`Ctrl+R`）。在以下位置配置：
 
-**Tools → Options → Environment → Keyboard**
+**工具 → 选项 → 环境 → 键盘**
 
 - `ClaudeVSGui.AgentAction1`
 - `ClaudeVSGui.AgentAction2`
